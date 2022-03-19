@@ -1,0 +1,28 @@
+{
+  "name": "projeto02refaturado",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index",
+    "dev": "nodemon index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mthiagoalves/Projeto02Refaturado.git"
+  },
+  "author": "Thiago e Diego",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mthiagoalves/Projeto02Refaturado/issues"
+  },
+  "homepage": "https://github.com/mthiagoalves/Projeto02Refaturado#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.3"
+  }
+}
