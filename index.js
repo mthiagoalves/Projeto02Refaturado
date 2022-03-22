@@ -1,4 +1,5 @@
 const express = require ("express");
+const { send } = require("express/lib/response");
 const app = express ();
 app.set("view engine", "ejs");
 const path = require ("path");
@@ -32,6 +33,11 @@ const pokedex = [
 app.get("/", (req, res) => {
     res.render("index", {pokedex});
 });
+
+app.post("/add", (req, res) => {
+    res.send(`Olá`)
+});
+
 
 app.listen(port, () =>{
     console.log(`Servidor rodando na URL http://localhost:${port}`)
