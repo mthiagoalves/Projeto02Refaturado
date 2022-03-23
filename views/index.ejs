@@ -10,9 +10,23 @@
 
     <body>  
 
+        <nav>
+
+            <ul>
+
+                <li><img src="/img/pokebola.png" alt="pokebola"></li>
+                <li> <a href="#cadastro"> Cadastro </a></li>
+                <li><h1> <a href="/">  Pokedex </a></h1></li>
+                <li> <a href="#cards"> Pokemons </a></li>
+                <li><img src="/img/pokebola.png" alt="pokebola"></li>
+
+            </ul>
+
+        </nav>
+
         <header>
 
-            <h1>Pokedex</h1>
+            <img src="/img/banner (2).jpg" alt="">
 
         </header>
 
@@ -32,8 +46,13 @@
                         <p>Tipo: <%= pokemon.tipo %> </p>
                         <p class="descricao"> <%= pokemon.descricao %> </p>
 
-                        <a href="/detalhes/<%= pokemon.id %>">Editar</a>
-                        
+                        <div id="btn">
+
+                            <a id="editar" href="/detalhes/<%= pokemon.id %>">Editar</a>
+                            <a id="deletar" href="/delete/<%= pokemon.id %>">Deletar</a>
+
+                        </div>
+
                     </div>
         
                 <% }); %>
@@ -98,6 +117,11 @@
             </section>
             
         </main>
+
+        <footer>
+            <p>Todos os direitos reservados para <a target="_blank" href="https://www.instagram.com/mthiagoalves/">Thiago Alves</a> e <a target="_blank" href=""> Diego Freitas </a> ©</p>
+            <p>Inpirado em <a target="_blank" href="https://www.pokemon.com/br/">Pokedex</a></p>
+        </footer>
 
     </body>
 

@@ -4,18 +4,46 @@
     padding: 0;
     margin: 0;
     font-family: Fredoka, Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
 }
 
-header {
-    padding: 1rem;
+nav{
+    position: fixed;
+    z-index: 9999;
     background-image: linear-gradient(89.8deg,rgba(222,74,74,1) 4.7%,rgba(30,29,29,1) 120.3% );
+    width: 100%;
 }
 
-header h1{
+nav ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+nav ul li{
+    padding: 0.8rem;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+
+nav img{
+    width: 3rem;
+}
+
+nav h1{
     color: #fff;
     font-size: 2rem;
     text-align: center;
     text-shadow: 10px 0px 5px rgb(45, 45, 45);
+}
+
+header img{
+    width: 100%;
 }
 
 main{
@@ -26,7 +54,7 @@ section#cards{
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    margin-top: 5rem;
+    padding-top: 6rem;
 }
 
 section#cards h2{
@@ -55,24 +83,49 @@ section#cards div.card p.descricao{
     margin-bottom: 1rem
 }
 
-section#cards div.card a{
+section#cards div.card a#editar{
     padding: 0.6rem;
     width: 25%;
     display: flex;
     justify-content: center;
     margin: 0 auto;
     background-color: #fff;
-    border: solid 1px rgb(14, 96, 204);
-    color: rgb(14, 96, 204);
+    border: solid 1px rgb(15, 155, 22);
+    color: rgb(15, 155, 22);
     cursor: pointer;
     transition: all 0.6s ease-in-out;
     text-decoration: none;
     margin-top: 2rem;
 }
 
-section#cards div.card a:hover{
-    background-color: rgb(14, 96, 204);
+section#cards div.card a#editar:hover{
+    background-color: rgb(15, 155, 22);
     color: #fff;
+}
+
+section#cards div.card a#deletar{
+    padding: 0.6rem;
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    background-color: #fff;
+    border: solid 1px rgb(194, 83, 83);
+    color: rgb(194, 83, 83);
+    cursor: pointer;
+    transition: all 0.6s ease-in-out;
+    text-decoration: none;
+    margin-top: 2rem;
+}
+
+section#cards div.card a#deletar:hover{
+    background-color: rgb(194, 83, 83);
+    color: #fff;
+}
+
+section#cards div.card div#btn{
+    display: flex;
+    flex-wrap: wrap;
 }
 
 section#cadastro{
@@ -127,3 +180,23 @@ section#cadastro form button:hover{
     background-color: rgb(194, 83, 83);
     color: #fff;
 }
+
+footer{
+    background-image: linear-gradient(89.8deg,rgba(222,74,74,1) 4.7%,rgba(30,29,29,1) 120.3% );
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+footer p{
+    width: 100%;
+    color: #fff;
+    text-align: center;
+}
+
+footer p a{
+    text-decoration: none;
+    color: rgb(15, 155, 22);
+}
+

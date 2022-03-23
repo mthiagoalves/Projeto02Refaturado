@@ -46,11 +46,15 @@ app.get("/", (req, res) => {
     res.render("index", {pokedex, pokemon});
 });
 
+app.get("/cadastro", (req,res) =>{
+    res.send("#cadastro");
+});
+
 app.post("/add", (req, res) => {
     const pokemon = req.body;
     pokemon.id = pokedex.length +1;
     pokedex.push(pokemon);
-    res.redirect("/");
+    res.redirect("/#cards");
 });
 
 
@@ -58,7 +62,7 @@ app.get("/detalhes/:id", (req, res) => {
     const id = +req.params.id;
     pokemon = pokedex.find(item => item.id === id);
 
-    res.redirect("/");
+    res.redirect("/#cadastro");
 })
 
 app.post("/update/:id", (req,res) => {
@@ -71,8 +75,8 @@ app.post("/update/:id", (req,res) => {
     
     pokemon = undefined;
 
-    res.redirect("/");
-})
+    res.redirect("/#cards");
+});
 
 app.listen(port, () =>{
     console.log(`Servidor rodando na URL http://localhost:${port}`)
