@@ -124,7 +124,7 @@ section#cards div.card a#deletar:hover{
     color: #fff;
 }
 
-section#cards div.card a#detalhes{
+div.btn a#detalhes{
     padding: 0.6rem;
     width: 35%;
     display: flex;
@@ -137,9 +137,10 @@ section#cards div.card a#detalhes{
     transition: all 0.6s ease-in-out;
     text-decoration: none;
     margin-top: 2rem;
+    margin-bottom: 3rem;
 }
 
-section#cards div.card a#detalhes:hover{
+div.btn a#detalhes:hover{
     background-color: rgb(15, 155, 22);
     color: #fff;
 }
