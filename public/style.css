@@ -18,6 +18,7 @@ nav ul{
     display: flex;
     align-items: center;
     list-style: none;
+    justify-content: space-evenly;
 }
 
 nav ul li{
@@ -120,6 +121,26 @@ section#cards div.card a#deletar{
 
 section#cards div.card a#deletar:hover{
     background-color: rgb(194, 83, 83);
+    color: #fff;
+}
+
+section#cards div.card a#detalhes{
+    padding: 0.6rem;
+    width: 35%;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    background-color: #fff;
+    border: solid 1px rgb(15, 155, 22);
+    color: rgb(15, 155, 22);
+    cursor: pointer;
+    transition: all 0.6s ease-in-out;
+    text-decoration: none;
+    margin-top: 2rem;
+}
+
+section#cards div.card a#detalhes:hover{
+    background-color: rgb(15, 155, 22);
     color: #fff;
 }
 

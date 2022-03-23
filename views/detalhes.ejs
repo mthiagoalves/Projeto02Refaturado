@@ -43,19 +43,22 @@
                         <p>Id: <%= pokemon.id %> </p>
                         <img src="<%= pokemon.imagem %>" alt="">
                         <h3> <%= pokemon.nome %> </h3>
+                        <p>Tipo: <%= pokemon.tipo %> </p>
+                        <p class="descricao"> <%= pokemon.descricao %> </p>
+
+                        <div id="btn">
+
+                            <a id="editar" href="/editar/<%= pokemon.id %>">Editar</a>
+                            <a id="deletar" href="/delete/<%= pokemon.id %>">Deletar</a>
+
+                        </div>
 
                     </div>
         
                 <% }); %>
     
             </section>
-
-            <div id="btn">
-
-                <a id="detalhes" href="/detalhes">Detalhes</a>
-
-            </div>
-
+            
         </main>
 
         <footer>
