@@ -86,15 +86,16 @@ app.post("/update/:id", (req,res) => {
 });
 
 app.get("/deletar/:id", (req,res) => {
-    const id = +req.params.id - 1;
+    const id = +req.params.id;
 
-    delete pokedex[id]
+    pokedex.splice(id, 1);
 
     console.log(pokedex)
 
     res.redirect("/detalhes")
     
 });
+
 
 app.listen(port, () =>{
     console.log(`Servidor rodando na URL http://localhost:${port}`)

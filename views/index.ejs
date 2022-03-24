@@ -5,12 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <title>Pokedex</title>
 </head>
 
     <body>  
 
         <nav>
+
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
 
             <ul>
 
@@ -26,7 +33,19 @@
 
         <header>
 
-            <img src="/img/banner (2).jpg" alt="">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><img src="/img/banner (0).jpg" alt=""></div>
+                  <div class="swiper-slide"><img src="/img/banner (1).jpg" alt=""></div>
+                  <div class="swiper-slide"><img src="/img/banner (2).jpg" alt=""></div>
+                  <div class="swiper-slide"><img src="/img/banner (3).jpg" alt=""></div>
+                </div>
+
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+
+            </div>
 
         </header>
 
@@ -59,9 +78,11 @@
         </main>
 
         <footer>
-            <p>Todos os direitos reservados para <a target="_blank" href="https://www.instagram.com/mthiagoalves/">Thiago Alves</a> e <a target="_blank" href=""> Diego Freitas </a> ©</p>
+            <p>Todos os direitos reservados para <a target="_blank" href="https://www.instagram.com/mthiagoalves/">Thiago Alves</a> e <a target="_blank" href="https://www.instagram.com/diegofreitas50/"> Diego Freitas </a> ©</p>
             <p>Inpirado em <a target="_blank" href="https://www.pokemon.com/br/">Pokedex</a></p>
         </footer>
+
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
     </body>
 
