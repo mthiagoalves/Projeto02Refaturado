@@ -82,6 +82,7 @@ app.post("/update/:id", (req,res) => {
     
     pokemon = undefined;
 
+    
     res.redirect("/detalhes");
 });
 

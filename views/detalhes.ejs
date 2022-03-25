@@ -4,14 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <title>Pokedex</title>
 </head>
 
     <body>  
 
         <nav>
+
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
 
             <ul>
 
@@ -29,10 +36,11 @@
 
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
-                  <div class="swiper-slide"><img src="/img/banner (0).jpg" alt=""></div>
+                  <div class="swiper-slide"><img src="/img/banner.jpg" alt=""></div>
                   <div class="swiper-slide"><img src="/img/banner (1).jpg" alt=""></div>
-                  <div class="swiper-slide"><img src="/img/banner (2).jpg" alt=""></div>
                   <div class="swiper-slide"><img src="/img/banner (3).jpg" alt=""></div>
+                  <div class="swiper-slide"><img src="/img/banner (4).jpg" alt=""></div>
+                  <div class="swiper-slide"><img src="/img/banner (5).jpg" alt=""></div>
                 </div>
 
                 <div class="swiper-button-next"></div>
@@ -47,40 +55,55 @@
 
             <section id="cards">
 
-                <h2>Lista dos Pokemons</h2>
+                <div class="container-wrap">
 
-                <% pokedex.forEach((pokemon) => { %>
-    
-                    <div class="card">
-                        
-                        <p>Id: <%= pokemon.id %> </p>
-                        <img src="<%= pokemon.imagem %>" alt="">
-                        <h3> <%= pokemon.nome %> </h3>
-                        <p>Tipo: <%= pokemon.tipo %> </p>
-                        <p class="descricao"> <%= pokemon.descricao %> </p>
+                    <h2>Lista dos Pokemons</h2>
 
-                        <div id="btn">
+                    <% pokedex.forEach((pokemon) => { %>
 
-                            <a id="editar" href="/editar/<%= pokemon.id %>">Editar</a>
-                            <a id="deletar" href="/deletar/<%= pokedex.indexOf(pokemon) %>">Deletar</a>
-
+                        <div class="container">
+                            <div class="product">
+                                <div class="product-card">
+                                    <h2 class="name"><%= pokemon.nome %></h2>
+                                    <span class="price"> Id: <%= pokemon.id %></span>
+                                    <a class="popup-btn">Detalhes</a>
+                                    <img src="<%= pokemon.imagem %>" alt="" class="product-img">
+                                </div>
+                                <div class="popup-view">
+                                    <div class="popup-card">
+                                        <a> <i class="fas fa-times close-btn"></i></a>
+                                        <div class="product-img">
+                                            <img src="<%= pokemon.imagem %>" alt="">
+                                        </div>
+                                        <div class="info">
+                                            <h2><%= pokemon.nome %> <br> <span><%= pokemon.tipo %></span></h2>
+                                            <p><%= pokemon.descricao %></p>
+                                            <span class="price">Id: <%= pokemon.id %></span>
+                                            <a href="/editar/<%= pokemon.id %>" class="add-cart-btn">Editar</a>
+                                            <a href="/deletar/<%= pokedex.indexOf(pokemon) %>" class="add-wish">Deletar</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+    
+                    <% }); %>
 
-                    </div>
-        
-                <% }); %>
+                </div>
     
             </section>
             
         </main>
 
         <footer>
-            <p>Todos os direitos reservados para <a target="_blank" href="https://www.instagram.com/mthiagoalves/">Thiago Alves</a> e <a target="_blank" href="https://www.instagram.com/diegofreitas50/"> Diego Freitas </a> ©</p>
-            <p>Inpirado em <a target="_blank" href="https://www.pokemon.com/br/">Pokedex</a></p>
+            <p>Todos os direitos reservados para <a target="_blank" href=" https://www.instagram.com/mthiagoalves/ " >Thiago Alves </a> e <a target="_blank" href=" https://www.instagram.com/diegofreitas50/ " > Diego Freitas </a> ©</p>
+            <p>Inpirado em <a target="_blank" href=" https://www.pokemon.com/br/" >Pokedex</a></p>
         </footer>
 
-        <script src="script.js"></script>
         <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <script src="script.js"></script>
+        <script src="scriptSlide.js"></script>
+        
 
     </body>
 
