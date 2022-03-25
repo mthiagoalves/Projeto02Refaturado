@@ -58,7 +58,6 @@ app.get("/", (req, res) => {
 app.get("/cadastro", (req,res) =>{
 
     res.render("cadastro", {pokedex, pokemon});
-
 });
 
 app.get("/detalhes", (req,res) =>{
