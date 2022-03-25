@@ -1,3 +1,4 @@
+
 const express = require ("express");
 const { send } = require("express/lib/response");
 const app = express ();
@@ -6,7 +7,7 @@ const path = require ("path");
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded());
 
-const port = 8081;
+const port = process.env.PORT || 3000;
 
 const pokedex = [
     {
