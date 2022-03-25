@@ -76,9 +76,11 @@
                                             <img src="<%= pokemon.imagem %>" alt="">
                                         </div>
                                         <div class="info">
-                                            <h2><%= pokemon.nome %> <br> <span><%= pokemon.tipo %></span></h2>
+                                            <h2 id="name-info"><%= pokemon.nome %> <br> <span><%= pokemon.tipo %></span> </h2>
+                                            <span class="price">Id: <%= pokemon.numero %></span>
                                             <p><%= pokemon.descricao %></p>
-                                            <span class="price">Id: <%= pokemon.id %></span>
+                                            <p>Altura: <%= pokemon.altura %></p><p>Peso: <%= pokemon.peso %></p>
+                                            <p>Categoria: <%= pokemon.categoria %></p><p>Habilidade: <%= pokemon.habilidade %></p>
                                             <a href="/editar/<%= pokemon.id %>" class="add-cart-btn">Editar</a>
                                             <a href="/deletar/<%= pokedex.indexOf(pokemon) %>" class="add-wish">Deletar</a>
                                         </div>

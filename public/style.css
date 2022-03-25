@@ -14,7 +14,7 @@ body{
 nav{
     position: fixed;
     z-index: 9999;
-    background-image: linear-gradient( 106.9deg,  rgba(148,14,60,1) 60.9%, rgba(3,22,27,1) 122.3% );;
+    background-image: linear-gradient( 178.2deg,  rgba(118,8,23,1) 10.9%, rgba(158,12,33,1) 62.6% );
     width: 100%;
 }
 
@@ -164,7 +164,8 @@ section#cards h2{
 
 .product .product-card .name{
     z-index: 2;
-    color: #fff;
+    color: #444;
+    text-shadow: 10px 2px 5px rgb(0, 0, 0);
     position: absolute;
     width: 100%;
     text-align: center;
@@ -266,7 +267,6 @@ section#cards h2{
 }
 
 .product .popup-card .close-btn{
-    color: #444;
     z-index: 3;
     position:absolute;
     right: 0;
@@ -275,13 +275,16 @@ section#cards h2{
     cursor: pointer;
 }
 
-.product .popup-card .info h2{
+.product .popup-card .info #name-info{
+    color: #151515;
     font-size: 40px;
     line-height: 20px;
     margin: 10px;
+    padding-bottom: 1rem;
 }
 
 .product .popup-card .info h2 span{
+    color: #151515;
     font-size: 15px;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -293,7 +296,7 @@ section#cards h2{
 }
 
 .product .popup-card .info .price{
-    font-size: 45px;
+    font-size: 35px;
     font-weight: 300;
     margin: 10px;
 
@@ -392,7 +395,7 @@ section#cards h2{
 
 section#cadastro{
     display: flex;
-    justify-content: center;
+    align-items: center;
     padding: 3rem;
 }
 
@@ -400,11 +403,13 @@ section#cadastro h2{
     width: 100%;
     text-align: center;
     padding-bottom: 2rem;
-    color: rgb(85, 85, 85);
+    color:#fff;
 }
 
 section#cadastro img{
-    width: 100%;
+    width: 100;
+    display: flex;
+    min-width: 300px;
 }
 
 section#cadastro form{
@@ -417,11 +422,13 @@ section#cadastro form input{
     font-size: 1rem;
     outline: none;
     border: solid 2px #ccc;
-    margin: 0rem 0.6rem 0.6rem 0rem
+    margin: 0rem 0.6rem 0.6rem 0rem;
+    border-radius: 10px;
+    background-color: rgb(173, 173, 173);
 }
 
 section#cadastro form label{
-    color: rgb(85, 85, 85);
+    color: #fff;
 }
 
 section#cadastro form button{
@@ -431,19 +438,19 @@ section#cadastro form button{
     justify-content: center;
     margin: 0 auto;
     background-color: #fff;
-    border: solid 1px rgb(194, 83, 83);
-    color: rgb(194, 83, 83);
+    border: solid 1px rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
     cursor: pointer;
     transition: all 0.6s ease-in-out;
 }
 
 section#cadastro form button:hover{
-    background-color: rgb(194, 83, 83);
-    color: #fff;
+    background-color: rgb(65, 65, 65);
+    color: rgb(255, 255, 255);
 }
 
 footer{
-    background-image: linear-gradient( 106.9deg,  rgba(148,14,60,1) 60.9%, rgba(3,22,27,1) 122.3% );
+    background-image: linear-gradient( 178.2deg,  rgba(118,8,23,1) 10.9%, rgba(158,12,33,1) 62.6% );
     padding: 2rem;
     display: flex;
     flex-wrap: wrap;
