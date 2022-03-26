@@ -17,7 +17,7 @@ popupBtns.forEach((popupBtn, i) => {
 closeBtns.forEach((closeBtns) => {
     closeBtns.addEventListener("click", () => {
         popupViews.forEach((popupViews) => {
-            popupViews.classList.remove('active')
+            popupViews.classList.remove('active');
         })
     })
 })
