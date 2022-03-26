@@ -62,22 +62,22 @@
                     <% pokedex.forEach((pokemon) => { %>
 
                         <div class="container">
-                            <div class="product">
-                                <div class="product-card">
+                            <div class="pokemon">
+                                <div class="pokemon-card">
                                     <h2 class="name"><%= pokemon.nome %></h2>
-                                    <span class="price"> Id: <%= pokemon.numero %></span>
+                                    <span class="tipo"> Id: <%= pokemon.numero %></span>
                                     <a class="popup-btn">Detalhes</a>
-                                    <img src="<%= pokemon.imagem %>" alt="" class="product-img">
+                                    <img src="<%= pokemon.imagem %>" alt="" class="pokemon-img">
                                 </div>
                                 <div class="popup-view">
                                     <div class="popup-card">
                                         <a> <i class="fas fa-times close-btn"></i></a>
-                                        <div class="product-img">
+                                        <div class="pokemon-img">
                                             <img src="<%= pokemon.imagem %>" alt="">
                                         </div>
                                         <div class="info">
                                             <h2 id="name-info"><%= pokemon.nome %> <br> <span><%= pokemon.tipo %></span> </h2>
-                                            <span class="price">Id: <%= pokemon.numero %></span>
+                                            <span class="tipo">Id: <%= pokemon.numero %></span>
                                             <p><%= pokemon.descricao %></p>
                                             <p>Altura: <%= pokemon.altura %></p><p>Peso: <%= pokemon.peso %></p>
                                             <p>Categoria: <%= pokemon.categoria %></p><p>Habilidade: <%= pokemon.habilidade %></p>

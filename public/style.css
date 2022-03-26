@@ -7,6 +7,10 @@
     scroll-behavior: smooth;
 }
 
+html{
+    min-width: 450px;
+}
+
 body{
     background-color: #151515;
     height: 100vh;
@@ -49,6 +53,10 @@ nav h1{
     text-shadow: 10px 0px 5px rgb(45, 45, 45);
 }
 
+header{
+    min-width: 450px;
+}
+
 header img{
     width: 100%;
     margin-top: 4.5rem;
@@ -76,14 +84,14 @@ header img{
     nav ul{
         position: fixed;
         width: 100%;
-        height: 100vh;
-        background-image: linear-gradient( 106.9deg,  rgba(148,14,60,1) 60.9%, rgba(3,22,27,1) 122.3% );;
+        height: 100%;
+        background-image: linear-gradient( 178.2deg,  rgba(118,8,23,1) 10.9%, rgba(158,12,33,1) 62.6% );
         top: 80px;
         left: -100%;
         text-align: center;         
         display: block;         
         transition: all .5s;    
-        justify-content: center;  
+        justify-content: center; 
     }    
     nav ul li{
         margin: 50px;
@@ -130,7 +138,7 @@ section#cards h2{
     justify-content: center;
 }
 
-.product .product-card{
+.pokemon .pokemon-card{
     display: flex;
     flex-direction: row;
     z-index: 1;
@@ -142,7 +150,7 @@ section#cards h2{
     border-radius: 10px;
 }
 
-.product .product-card:before{
+.pokemon .pokemon-card:before{
     content: '';
     background: rgba(255, 255, 255, 0.1);
     position: absolute;
@@ -155,7 +163,7 @@ section#cards h2{
     border-bottom-left-radius: 10px;
 }
 
-.product .product-card .product-img{
+.pokemon .pokemon-card .pokemon-img{
     z-index: 1;
     position: absolute;
     max-width: 350px;
@@ -164,7 +172,7 @@ section#cards h2{
     transform: translate(-50%, -50%);
 }
 
-.product .product-card .name{
+.pokemon .pokemon-card .name{
     z-index: 2;
     color: #444;
     text-shadow: 10px 2px 5px rgb(0, 0, 0);
@@ -175,7 +183,7 @@ section#cards h2{
     letter-spacing: 1px;
 }
 
-.product .product-card .price{
+.pokemon .pokemon-card .tipo{
     z-index: 2;
     color: #fff;
     position: absolute;
@@ -186,7 +194,7 @@ section#cards h2{
     font-weight: 300;
 }
 
-.product .product-card .popup-btn{
+.pokemon .pokemon-card .popup-btn{
     z-index: 2;
     color: #fff;
     background: #555;
@@ -206,7 +214,7 @@ section#cards h2{
 
 /* Estilização dos detalhes */
 
-.product .popup-view{
+.pokemon .popup-view{
     z-index: 2;
     background: rgba(255, 255, 255, 0.5);
     position: fixed;
@@ -222,12 +230,12 @@ section#cards h2{
     transition: 0.7s;
 }
 
-.product .popup-view.active{
+.pokemon .popup-view.active{
     opacity: 1;
     visibility: visible;
 }
 
-.product .popup-card{
+.pokemon .popup-card{
     position: relative;
     display: flex;
     width: 800px;
@@ -236,7 +244,7 @@ section#cards h2{
 
 }
 
-.product .popup-card .product-img{
+.pokemon .popup-card .pokemon-img{
     z-index: 2;
     background: #1d212b;
     position: relative;
@@ -250,14 +258,14 @@ section#cards h2{
     border-bottom-left-radius: 10px;
 }
 
-.product .popup-card .product-img img{
+.pokemon .popup-card .pokemon-img img{
     z-index: 2;
     position: relative;
     width: 450px;
     left: -50px;
 }
 
-.product .popup-card .info{
+.pokemon .popup-card .info{
     z-index: 2;
     background: #fff;
     display: flex;
@@ -268,7 +276,7 @@ section#cards h2{
     border-radius: 10px; 
 }
 
-.product .popup-card .close-btn{
+.pokemon .popup-card .close-btn{
     z-index: 3;
     position:absolute;
     right: 0;
@@ -277,7 +285,7 @@ section#cards h2{
     cursor: pointer;
 }
 
-.product .popup-card .info #name-info{
+.pokemon .popup-card .info #name-info{
     color: #151515;
     font-size: 40px;
     line-height: 20px;
@@ -285,26 +293,26 @@ section#cards h2{
     padding-bottom: 1rem;
 }
 
-.product .popup-card .info h2 span{
+.pokemon .popup-card .info h2 span{
     color: #151515;
     font-size: 15px;
     text-transform: uppercase;
     letter-spacing: 2px;
 }
 
-.product .popup-card .info p{
+.pokemon .popup-card .info p{
     font-size: 15px;
     margin: 10px;
 }
 
-.product .popup-card .info .price{
+.pokemon .popup-card .info .tipo{
     font-size: 35px;
     font-weight: 300;
     margin: 10px;
 
 }
 
-.product .popup-card .info .add-cart-btn{
+.pokemon .popup-card .info .add-cart-btn{
     color: #fff;
     background: #009dd2;
     font-size: 16px;
@@ -317,7 +325,7 @@ section#cards h2{
     border-radius: 20px;
 }
 
-.product .popup-card .info .add-wish{
+.pokemon .popup-card .info .add-wish{
     color: #009dd2;
     font-size: 14px;
     text-align: center;
@@ -328,13 +336,13 @@ section#cards h2{
 /* Responsividade do card de detalhes*/
 
 @media (max-width: 900px){
-    .product .popup-card{
+    .pokemon .popup-card{
         flex-direction: column;
         width: 550px;
         height: auto;
     }
 
-    .product-card .popup-card .product-img{
+    .pokemon-card .popup-card .pokemon-img{
         z-index: 3;
         width: 100%;
         height: 200px;
@@ -345,12 +353,12 @@ section#cards h2{
 
     }
 
-    .product .popup-card .product-img img{
+    .pokemon .popup-card .pokemon-img img{
         left: initial;
         max-width: 100%;
     }
 
-    .product .popup-card .info {
+    .pokemon .popup-card .info {
         width: 100%;
         height: auto;
         padding: 20px;
@@ -358,37 +366,37 @@ section#cards h2{
         border-top-left-radius: 0;
     }
 
-    .product .popup-card .info h2{
+    .pokemon .popup-card .info h2{
         margin: 20px 5px 5px 5px;
         font-size: 25px;
     }
 
-    .product .popup-card .info h2 span{
+    .pokemon .popup-card .info h2 span{
         font-size: 10px;
     }
 
-    .product .popup-card .info p{
+    .pokemon .popup-card .info p{
         margin: 5px;
         font-size: 13px;
     }
 
-    .product .popup-card .info .price{
+    .pokemon .popup-card .info .tipo{
         margin: 5px;
         font-size: 30px;
     }
 
-    .product .popup-card .info .add-cart-btn{
+    .pokemon .popup-card .info .add-cart-btn{
         margin: 5px auto;
         padding: 5px 40px;
         font-size: 14px;
     }
 
-    .product .popup-card .info .add-wish{
+    .pokemon .popup-card .info .add-wish{
         font-size: 14px;
 
     }
 
-    .product .popup-card .close-btn{
+    .pokemon .popup-card .close-btn{
         z-index: 4;
 
     }
@@ -397,8 +405,11 @@ section#cards h2{
 
 section#cadastro{
     display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
     align-items: center;
     padding: 3rem;
+    justify-content: center;
 }
 
 section#cadastro h2{
@@ -409,9 +420,10 @@ section#cadastro h2{
 }
 
 section#cadastro img{
-    width: 100;
+    max-width: 500px;;
     display: flex;
     min-width: 300px;
+    margin: 2rem;
 }
 
 section#cadastro form{
@@ -419,14 +431,17 @@ section#cadastro form{
 }
 
 section#cadastro form input{
+    min-width: 350px;
     width: 100%;
     padding: 0.5rem;
     font-size: 1rem;
     outline: none;
     border: solid 2px #ccc;
     margin: 0rem 0.6rem 0.6rem 0rem;
-    border-radius: 10px;
+    border-radius: 3px 20px ;
     background-color: rgb(173, 173, 173);
+    flex-direction: column;
+    display: flex;
 }
 
 section#cadastro form label{
@@ -439,11 +454,12 @@ section#cadastro form button{
     display: flex;
     justify-content: center;
     margin: 0 auto;
-    background-color: #fff;
+    background-color: #555555;
     border: solid 1px rgb(0, 0, 0);
-    color: rgb(0, 0, 0);
+    border-radius: 10px 0 10px 0;
+    color: rgb(255, 255, 255);
     cursor: pointer;
-    transition: all 0.6s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 section#cadastro form button:hover{
@@ -472,6 +488,7 @@ footer p{
 footer p a{
     text-decoration: none;
     color: rgb(15, 155, 22);
+    padding: 0 .3rem
 }
 .swiper {
     width: 100%;
