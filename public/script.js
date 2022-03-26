@@ -11,14 +11,14 @@ let popup = function(popupClick){
 popupBtns.forEach((popupBtn, i) => {
     popupBtn.addEventListener("click", () => {
         popup(i);
-    })
-})
+    });
+});
 
 closeBtns.forEach((closeBtns) => {
     closeBtns.addEventListener("click", () => {
         popupViews.forEach((popupViews) => {
             popupViews.classList.remove('active');
-        })
-    })
-})
+        });
+    });
+});
 

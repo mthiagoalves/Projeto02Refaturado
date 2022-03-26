@@ -14,14 +14,14 @@
     <body>  
 
         <nav>
-
+            <!-- nav dedicada para resoluções pequenas  -->
             <input type="checkbox" id="check">
             <label for="check" class="checkbtn">
                 <i class="fas fa-bars"></i>
             </label>
 
             <ul>
-
+                <!-- nav principal -->
                 <li><img src="/img/pokebola.png" alt="pokebola"></li>
                 <li> <a href="/cadastro"> Cadastro </a></li>
                 <li><h1> <a href="/">  Pokedex </a></h1></li>
@@ -33,7 +33,7 @@
         </nav>
 
         <header>
-
+            <!-- Banner e swiper do mesmo -->
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide"><img src="/img/banner.jpg" alt=""></div>
@@ -42,7 +42,7 @@
                   <div class="swiper-slide"><img src="/img/banner (4).jpg" alt=""></div>
                   <div class="swiper-slide"><img src="/img/banner (5).jpg" alt=""></div>
                 </div>
-
+                <!-- botões do swiper -->
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-pagination"></div>
@@ -52,16 +52,17 @@
         </header>
 
         <main>
-
+            <!-- section principal dos cards -->
             <section id="cards">
-
+                <!-- classe onde deixa os cards lado a lado -->
                 <div class="container-wrap">
 
                     <h2>Lista dos Pokemons</h2>
-
+                    <!-- for each feito para mostrar todos os dados cadastrados no objeto do arquivo JS -->
                     <% pokedex.forEach((pokemon) => { %>
 
-                        <div class="container">
+                        <!-- primeiro card de exibição dos pokemons -->
+                        <div class="container"> 
                             <div class="pokemon">
                                 <div class="pokemon-card">
                                     <h2 class="name"><%= pokemon.nome %></h2>
@@ -69,6 +70,7 @@
                                     <a class="popup-btn">Detalhes</a>
                                     <img src="<%= pokemon.imagem %>" alt="" class="pokemon-img">
                                 </div>
+                                <!-- segundo card que abre como popup com detalhes dos pokemons -->
                                 <div class="popup-view">
                                     <div class="popup-card">
                                         <a> <i class="fas fa-times close-btn"></i></a>
@@ -81,6 +83,7 @@
                                             <p><%= pokemon.descricao %></p>
                                             <p>Altura: <%= pokemon.altura %></p><p>Peso: <%= pokemon.peso %></p>
                                             <p>Categoria: <%= pokemon.categoria %></p><p>Habilidade: <%= pokemon.habilidade %></p>
+                                            <!-- botões para editar e deletar um card -->
                                             <a href="/editar/<%= pokemon.id %>" class="add-cart-btn">Editar</a>
                                             <a href="/deletar/<%= pokedex.indexOf(pokemon) %>" class="add-wish">Deletar</a>
                                         </div>
@@ -101,10 +104,10 @@
             <p>Todos os direitos reservados para <a target="_blank" href=" https://www.instagram.com/mthiagoalves/ " >Thiago Alves </a> e <a target="_blank" href=" https://www.instagram.com/diegofreitas50/ " > Diego Freitas </a> ©</p>
             <p>Inpirado em <a target="_blank" href=" https://www.pokemon.com/br/" >Pokedex</a></p>
         </footer>
-
-        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-        <script src="script.js"></script>
-        <script src="scriptSlide.js"></script>
+        <!-- scripts usados fora do script main -->
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> <!-- script para adicionar o botão de next e prev do banner -->
+        <script src="script.js"></script> <!-- script para para ativar o segundo card "popup" -->
+        <script src="scriptSlide.js"></script> <!-- script do slide do banner -->
         
 
     </body>
